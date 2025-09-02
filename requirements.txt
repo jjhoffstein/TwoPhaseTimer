@@ -1,2 +1,3 @@
-fasthtml
+python-fasthtml
 MonsterUI
+
