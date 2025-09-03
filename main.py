@@ -14,11 +14,9 @@ app, rt = fast_app(hdrs=_hdrs)
 def TimerCard():
     return Card(
         Div(
+                          ThemePicker(color=False, radii=False, shadows=False, font=False, mode=True, cls="ml-auto"),
+                cls="space-y-1" ),
             Div(
-                H1("Two-Phase Bird Timer"),
-                ThemePicker(color=False, radii=False, shadows=False, font=False, mode=True, cls="ml-auto"),
-                cls="flex items-center justify-between"
-            ),
             H4("Set phase durations and press Start.", cls="text-muted-foreground mb-2"),
             cls="space-y-2"
         ),
@@ -243,7 +241,7 @@ def TimerCard():
 
 @rt
 def index():
-    return Titled(
+    return Titled(        "🐦 Avian Interval Timer",             # Sets the browser tab icon
         Container(
             TimerCard(),
             cls="py-6"
